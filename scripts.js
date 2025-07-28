@@ -68,200 +68,6 @@ contact.addEventListener ('click', () => {
     document.querySelector('.contact-section').scrollIntoView()
 })
 
-
-//Traduzir texto/Translate text
-const traduzir = document.querySelector('.translate')
-
-const idiomas = document.querySelector('.language')
-
-const idiomaTxt = document.querySelector('.language span')
-
-const portuguese = document.getElementById('portuguese')
-
-const english = document.getElementById('english')
-
-const mainTitle = document.querySelector('.m-title')
-
-const redline = document.querySelector('.redline span')
-
-const homeText = document.querySelector('.m-text span')
-
-const tecTitleOne = document.querySelector('#tecTitleOne')
-
-const tecTitleTwo = document.querySelector('#skills')
-
-const dynamics = document.getElementById('dynamics')
-
-const responsives = document.getElementById('responsives')
-
-const links = document.querySelectorAll('.p-link a')
-
-traduzir.addEventListener('click', () => {
-    idiomas.classList.toggle('direita')
-    if (idiomaTxt.innerHTML === 'PT-BR') {
-
-        document.querySelector('#goHome').innerHTML = "Home"
-        document.querySelector('#goTec').innerHTML = "My skills"
-        document.querySelector('#goAbout').innerHTML = "About me"
-        document.querySelector('#goProject').innerHTML = "Projects"
-        document.querySelector('#goContact').innerHTML = "Contact"
-
-        idiomaTxt.innerHTML = 'ENG'
-        english.style.color = '#431ea7'
-        portuguese.style.color = '#FFF'
-
-        mainTitle.innerHTML = `
-        <span class="heavy">Transforming</span>
-        <span class="heavy htwo">your ideas</span>
-        `
-
-        redline.innerHTML = `In <mark>unique</mark> projects`
-
-        homeText.innerHTML = `
-        Creativity and innovation go hand in hand. With a unique combination of impactful design, 
-        intuitive functionality, and optimization for results, I'm ready to create the online presence of 
-        your dreams.
-        `
-        tecTitleOne.innerHTML = "My skills"
-
-        tecTitleTwo.innerHTML = "My Specialities"
-
-        dynamics.innerHTML = 'Dynamic Websites'
-
-        responsives.innerHTML = 'Responsive Websites'
-
-        document.querySelector('.a-title span').innerHTML = "About me"
-
-        linhaUm.innerHTML = `Hello! My name is Renan and i'm a`;
-        linhaDois.innerHTML = 'Front-End developer who values for a';
-        linhaTres.innerHTML = 'simple, intuitive, responsive and';
-        linhaQuatro.innerHTML = 'functional design in the development of ';
-        linhaCinco.innerHTML = 'Web pages. I have knowledge in Javascript,';
-        linhaSeis.innerHTML = 'CSS3 and HTML 5, witch has been studied';
-        linhaSete.innerHTML = 'for more than two years, always seeking';
-        linhaOito.innerHTML = 'to improve what was learned.';
-        linhaNove.innerHTML = `I'm looking to give an excellence work.`;
-        linhaDez.innerHTML = 'understanding needs and preferences of';
-        linhaOnze.innerHTML = 'the customer, to deliver my services';
-        linhaDoze.innerHTML = 'in the best way possible.';
-
-        document.querySelector('.p-title span').innerHTML = "Projects developed"
-
-        document.querySelector('#mercDesc').innerHTML = "E-commerce project aimed at selling electronics."
-
-        document.querySelector('#advDesc').innerHTML = "Landing Page project for a law firm."
-
-        document.querySelector('#batDesc').innerHTML = "Website project for ticket sales."
-
-        links.forEach(link => {
-            link.innerHTML = `Go to project`
-        })
-
-        document.querySelector('.c-title span').innerHTML = "Contact me"
-
-        document.querySelector('.f-right span').innerHTML = "Developed by: Renan Nascimento"
-
-        if (y.matches) {
-            linhaUm.innerHTML = `Hello! My name is Renan and i'm`;
-            linhaDois.innerHTML = 'a Front-End developer who values';
-            linhaTres.innerHTML = 'for a intuitive, responsive';
-            linhaQuatro.innerHTML = 'and functional design in the';
-            linhaCinco.innerHTML = 'development of Web pages. I have';
-            linhaSeis.innerHTML = 'knowledge in Javascript, CSS3 and';
-            linhaSete.innerHTML = 'HTML5, witch has been studied for';
-            linhaOito.innerHTML = 'more than two years, always';
-            linhaNove.innerHTML = `seeking to improve what was`;
-            linhaDez.innerHTML = ` learned. I'm looking to give an `;
-            linhaOnze.innerHTML = 'excellence work. Understanding';
-            linhaDoze.innerHTML = 'needs and preferences of the';
-        
-            document.querySelector('.row-thirteen').innerHTML = "customer, to deliver my services in the best way possible."
-    }
-    }
-    else if (idiomaTxt.innerHTML === 'ENG') {
-        document.querySelector('#goHome').innerHTML = "Início"
-        document.querySelector('#goTec').innerHTML = "Tecnologias"
-        document.querySelector('#goAbout').innerHTML = "Sobre mim"
-        document.querySelector('#goProject').innerHTML = "Projetos"
-        document.querySelector('#goContact').innerHTML = "Contato"
-
-        idiomaTxt.innerHTML = 'PT-BR'
-        english.style.color = '#FFF'
-        portuguese.style.color = '#431ea7'
-
-        mainTitle.innerHTML = `
-        <span class="heavy">Transformando</span>
-        <span class="heavy htwo">suas ideias</span>
-        `
-
-        redline.innerHTML = `Em projetos <mark>únicos.</mark>`
-
-        homeText.innerHTML = `
-        Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, 
-        funcionalidade intuitiva e otimização para resultados, estou pronto para criar a presença online 
-        de seus sonhos.
-        `
-        tecTitleOne.innerHTML = "Tecnologias"
-
-        tecTitleTwo.innerHTML = "Especialidades"
-
-        dynamics.innerHTML = 'Sites dinâmicos'
-
-        responsives.innerHTML = 'Sites responsivos'
-
-        document.querySelector('.a-title span').innerHTML = "Sobre mim"
-
-        linhaUm.innerHTML = `Olá! Me chamo Renan e sou um desenvolvedor`;
-        linhaDois.innerHTML = 'Front-End que preza por um design simples,';
-        linhaTres.innerHTML = 'intuitivo, funcional e responsivo';
-        linhaQuatro.innerHTML = 'no desenvolvimento de páginas web.';
-        linhaCinco.innerHTML = 'Tenho conhecimentos em Javascript, CSS 3 e';
-        linhaSeis.innerHTML = 'HTML 5 , que vem sendo estudados';
-        linhaSete.innerHTML = 'a mais de dois anos, buscando sempre';
-        linhaOito.innerHTML = 'incrementar o que foi aprendido.';
-        linhaNove.innerHTML = `Busco conseguir um atendimento de`;
-        linhaDez.innerHTML = 'excelência, entendendo necessidades e';
-        linhaOnze.innerHTML = 'preferências do cliente para conseguir';
-        linhaDoze.innerHTML = 'trabalhar da melhor forma possível.';
-
-        document.querySelector('.p-title span').innerHTML = "Projetos desenvolvidos"
-
-        document.querySelector('#mercDesc').innerHTML = "Projeto de E-commerce destinado a venda de eletrônicos."
-
-        document.querySelector('#advDesc').innerHTML = "Projeto de Landing Page Para escritório de advocacia."
-
-        document.querySelector('#batDesc').innerHTML = "Projeto de site destinado á venda de ingressos."
-
-        links.forEach(link => {
-            link.innerHTML = `Ver projeto`
-        })
-
-        document.querySelector('.c-title span').innerHTML = "Entre em contato"
-
-        document.querySelector('.f-right span').innerHTML = "Desenvolvido por: Renan Nascimento"
-
-        if (y.matches) {
-            linhaUm.innerHTML = 'Olá! Me chamo Renan e sou um';
-            linhaDois.innerHTML = 'desenvolvedor Front-End que';
-            linhaTres.innerHTML = 'preza por um design simples,';
-            linhaQuatro.innerHTML = 'intuitivo, funcional, e responsivo';
-            linhaCinco.innerHTML = 'no desenvolvimento de páginas web.';
-            linhaSeis.innerHTML = 'Tenho conhecimentos em Javascript,';
-            linhaSete.innerHTML = 'CSS 3 e HTML 5 que vem sendo';
-            linhaOito.innerHTML = ' estudados a mais de dois anos,';
-            linhaNove.innerHTML = ' buscando sempre incrementar o que foi aprendido. Busco conseguir';
-            linhaDez.innerHTML = 'um atendimento de excelência, entendendo necessidades e';
-            linhaOnze.innerHTML = 'preferências do cliente para';
-            linhaDoze.innerHTML = 'conseguir trabalhar da melhor';
-        
-            document.querySelector('.row-thirteen').innerHTML = "forma possível."
-    }
-
-        animation()
-    }
-})
-
-
 //Ajustar texto/Adjust text
 function ajustarTexto() {
     if (y.matches) {
@@ -357,9 +163,230 @@ const handleProjetc = () => {
 handleProjetc()
 
 avancaProjeto.addEventListener ('click', () => {
-    proceed(), handleProjetc(), console.log(projetoExibido)
+    proceed()
+    handleProjetc()
+    if (idiomaTxt.innerHTML === 'PT-BR') {
+        translatePortuguese()
+    } else if (idiomaTxt.innerHTML === 'ENG'){
+        translateEnlgish()
+    }
 })
 
 voltaProjeto.addEventListener ('click', () => {
-    retreat(), handleProjetc(), console.log(projetoExibido)
+    retreat()
+    handleProjetc()
+    if (idiomaTxt.innerHTML === 'PT-BR') {
+        translatePortuguese()
+    } else if (idiomaTxt.innerHTML === 'ENG'){
+        translateEnlgish()
+    }
+})
+
+
+
+//Traduzir texto/Translate text
+const traduzir = document.querySelector('.translate')
+const idiomas = document.querySelector('.language')
+const idiomaTxt = document.querySelector('.language span')
+const portuguese = document.getElementById('portuguese')
+const english = document.getElementById('english')
+const mainTitle = document.querySelector('.m-title')
+const redline = document.querySelector('.redline span')
+const homeText = document.querySelector('.m-text span')
+const tecTitleOne = document.querySelector('#tecTitleOne')
+const tecTitleTwo = document.querySelector('#skills')
+const intuitive = document.getElementById('intuitive')
+const dynamics = document.getElementById('dynamics')
+const responsives = document.getElementById('responsives')
+const links = document.querySelectorAll('.p-link a')
+
+const translateEnlgish = () => {
+
+        document.querySelector('#goHome').innerHTML = "Home"
+        document.querySelector('#goTec').innerHTML = "My skills"
+        document.querySelector('#goAbout').innerHTML = "About me"
+        document.querySelector('#goProject').innerHTML = "Projects"
+        document.querySelector('#goContact').innerHTML = "Contact"
+
+        english.style.color = '#431ea7'
+        portuguese.style.color = '#FFF'
+
+        mainTitle.innerHTML = `
+        <span class="heavy">Transforming</span>
+        <span class="heavy htwo">your ideas</span>
+        `
+
+        redline.innerHTML = `In <mark>unique</mark> projects`
+
+        homeText.innerHTML = `
+        Creativity and innovation go hand in hand. With a unique combination of impactful design, 
+        intuitive functionality, and optimization for results, I'm ready to create the online presence of 
+        your dreams.
+        `
+        tecTitleOne.innerHTML = "My skills"
+
+        tecTitleTwo.innerHTML = "My Specialities"
+
+        intuitive.innerHTML = 'Intuitive interface'
+
+        dynamics.innerHTML = 'Dynamic Websites'
+
+        responsives.innerHTML = 'Responsive Websites'
+
+        document.querySelector('.a-title span').innerHTML = "About me"
+
+        linhaUm.innerHTML = `Hello! My name is Renan and i'm a`;
+        linhaDois.innerHTML = 'Front-End developer who values for a';
+        linhaTres.innerHTML = 'simple, intuitive, responsive and';
+        linhaQuatro.innerHTML = 'functional design in the development of ';
+        linhaCinco.innerHTML = 'Web pages. I have knowledge in Javascript,';
+        linhaSeis.innerHTML = 'CSS3 and HTML 5, witch has been studied';
+        linhaSete.innerHTML = 'for more than two years, always seeking';
+        linhaOito.innerHTML = 'to improve what was learned.';
+        linhaNove.innerHTML = `I'm looking to give an excellence work.`;
+        linhaDez.innerHTML = 'understanding needs and preferences of';
+        linhaOnze.innerHTML = 'the customer, to deliver my services';
+        linhaDoze.innerHTML = 'in the best way possible.';
+
+        document.querySelector('.p-title span').innerHTML = "Projects developed"
+
+        document.querySelector('#mercDesc').innerHTML = "E-commerce project aimed at selling electronics developed in React."
+
+        document.querySelector('#advDesc').innerHTML = "Landing Page project for a law firm."
+
+        document.querySelector('#batDesc').innerHTML = "Website project for ticket sales."
+
+        document.querySelector('#quizDesc').innerHTML = "A quiz about programming developed in React."
+
+        document.querySelector('#multiDesc').innerHTML = "A form divided by steps developed in React."
+
+        document.querySelector('#countDesc').innerHTML = "A customizable countdown developed in React."
+
+        links.forEach(link => {
+            link.innerHTML = `Go to project`
+        })
+
+        document.querySelector('.c-title span').innerHTML = "Contact me"
+
+        document.querySelector('.f-right span').innerHTML = "Developed by: Renan Nascimento"
+
+        if (y.matches) {
+            linhaUm.innerHTML = `Hello! My name is Renan and i'm`;
+            linhaDois.innerHTML = 'a Front-End developer who values';
+            linhaTres.innerHTML = 'for a intuitive, responsive';
+            linhaQuatro.innerHTML = 'and functional design in the';
+            linhaCinco.innerHTML = 'development of Web pages. I have';
+            linhaSeis.innerHTML = 'knowledge in Javascript, CSS3 and';
+            linhaSete.innerHTML = 'HTML5, witch has been studied for';
+            linhaOito.innerHTML = 'more than two years, always';
+            linhaNove.innerHTML = `seeking to improve what was`;
+            linhaDez.innerHTML = ` learned. I'm looking to give an `;
+            linhaOnze.innerHTML = 'excellence work. Understanding';
+            linhaDoze.innerHTML = 'needs and preferences of the';
+        
+            document.querySelector('.row-thirteen').innerHTML = "customer, to deliver my services in the best way possible."
+    }
+    animation()
+}
+
+const translatePortuguese = () => {
+        document.querySelector('#goHome').innerHTML = "Início"
+        document.querySelector('#goTec').innerHTML = "Tecnologias"
+        document.querySelector('#goAbout').innerHTML = "Sobre mim"
+        document.querySelector('#goProject').innerHTML = "Projetos"
+        document.querySelector('#goContact').innerHTML = "Contato"
+
+        english.style.color = '#FFF'
+        portuguese.style.color = '#431ea7'
+
+        mainTitle.innerHTML = `
+        <span class="heavy">Transformando</span>
+        <span class="heavy htwo">suas ideias</span>
+        `
+
+        redline.innerHTML = `Em projetos <mark>únicos.</mark>`
+
+        homeText.innerHTML = `
+        Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, 
+        funcionalidade intuitiva e otimização para resultados, estou pronto para criar a presença online 
+        de seus sonhos.
+        `
+        tecTitleOne.innerHTML = "Tecnologias"
+
+        tecTitleTwo.innerHTML = "Especialidades"
+
+        intuitive.innerHTML = 'Interface intuitiva'
+
+        dynamics.innerHTML = 'Sites dinâmicos'
+
+        responsives.innerHTML = 'Sites responsivos'
+
+        document.querySelector('.a-title span').innerHTML = "Sobre mim"
+
+        linhaUm.innerHTML = `Olá! Me chamo Renan e sou um desenvolvedor`;
+        linhaDois.innerHTML = 'Front-End que preza por um design simples,';
+        linhaTres.innerHTML = 'intuitivo, funcional e responsivo';
+        linhaQuatro.innerHTML = 'no desenvolvimento de páginas web.';
+        linhaCinco.innerHTML = 'Tenho conhecimentos em Javascript, CSS 3 e';
+        linhaSeis.innerHTML = 'HTML 5 , que vem sendo estudados';
+        linhaSete.innerHTML = 'a mais de dois anos, buscando sempre';
+        linhaOito.innerHTML = 'incrementar o que foi aprendido.';
+        linhaNove.innerHTML = `Busco conseguir um atendimento de`;
+        linhaDez.innerHTML = 'excelência, entendendo necessidades e';
+        linhaOnze.innerHTML = 'preferências do cliente para conseguir';
+        linhaDoze.innerHTML = 'trabalhar da melhor forma possível.';
+
+        document.querySelector('.p-title span').innerHTML = "Projetos desenvolvidos"
+
+        document.querySelector('#mercDesc').innerHTML = "Projeto de E-commerce destinado a venda de eletrônicos desenvolvido com React."
+
+        document.querySelector('#advDesc').innerHTML = "Projeto de Landing Page Para escritório de advocacia."
+
+        document.querySelector('#batDesc').innerHTML = "Projeto de site destinado á venda de ingressos."
+
+        document.querySelector('#quizDesc').innerHTML = "Quiz sobre programação desenvolvido em React."
+
+        document.querySelector('#multiDesc').innerHTML = "Projeto em React de um formulário dividido por etapas."
+
+        document.querySelector('#countDesc').innerHTML = "Projeto em React de contagem regressiva personalizável."
+
+        links.forEach(link => {
+            link.innerHTML = `Ver projeto`
+        })
+
+        document.querySelector('.c-title span').innerHTML = "Entre em contato"
+
+        document.querySelector('.f-right span').innerHTML = "Desenvolvido por: Renan Nascimento"
+
+        if (y.matches) {
+            linhaUm.innerHTML = 'Olá! Me chamo Renan e sou um';
+            linhaDois.innerHTML = 'desenvolvedor Front-End que';
+            linhaTres.innerHTML = 'preza por um design simples,';
+            linhaQuatro.innerHTML = 'intuitivo, funcional, e responsivo';
+            linhaCinco.innerHTML = 'no desenvolvimento de páginas web.';
+            linhaSeis.innerHTML = 'Tenho conhecimentos em Javascript,';
+            linhaSete.innerHTML = 'CSS 3 e HTML 5 que vem sendo';
+            linhaOito.innerHTML = ' estudados a mais de dois anos,';
+            linhaNove.innerHTML = ' buscando sempre incrementar o que foi aprendido. Busco conseguir';
+            linhaDez.innerHTML = 'um atendimento de excelência, entendendo necessidades e';
+            linhaOnze.innerHTML = 'preferências do cliente para';
+            linhaDoze.innerHTML = 'conseguir trabalhar da melhor';
+        
+            document.querySelector('.row-thirteen').innerHTML = "forma possível."
+    }
+
+        animation()
+}
+
+
+traduzir.addEventListener('click', () => {
+    idiomas.classList.toggle('direita')
+    if (idiomaTxt.innerHTML === 'PT-BR') {
+        translateEnlgish()
+        idiomaTxt.innerHTML = 'ENG'
+    } else {
+        translatePortuguese()
+        idiomaTxt.innerHTML = 'PT-BR'
+    }
+    
 })
