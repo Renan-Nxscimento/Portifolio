@@ -18,125 +18,6 @@ const linhaOnze = document.querySelector('.row-eleven')
 const linhaDoze = document.querySelector('.row-twelve')
 
 
-
-//Alterar imagem dos projetos/Change projects images
-const mercBack = document.querySelector('.mercBack')
-const mercNext = document.querySelector('.mercNext')
-const advBack = document.querySelector('.advBack')
-const advNext = document.querySelector('.advNext')
-const batBack = document.querySelector('.batBack')
-const batNext = document.querySelector('.batNext')
-
-let mercNumber = 1
-
-let advNumber = 1
-
-let batNumber = 1
-
-function changeImage() {
-    const mercImg = document.getElementById('mercImg')
-    if (mercNumber === 1) {
-        mercImg.style.backgroundImage = "url('img/Projects/Merchant/Mhome.png')"
-    }
-    else if (mercNumber === 2) {
-        mercImg.style.backgroundImage = "url('img/Projects/Merchant/Mprod.png')"
-    }
-    else if (mercNumber === 3) {
-        mercImg.style.backgroundImage = "url('img/Projects/Merchant/Mcart.png')"
-    }
-    else if (mercNumber === 4) {
-        mercImg.style.backgroundImage = "url('img/Projects/Merchant/Mreview.png')"
-    }
-
-    const advImg = document.getElementById('advImg')
-    if (advNumber === 1) {
-        advImg.style.backgroundImage = "url('img/Projects/Advogh/Ahome.png')"
-    }
-    else if (advNumber === 2) {
-        advImg.style.backgroundImage = "url('img/Projects/Advogh/Aone.png')"
-    }
-    else if (advNumber === 3) {
-        advImg.style.backgroundImage = "url('img/Projects/Advogh/Atwo.png')"
-    }
-    else if (advNumber === 4) {
-        advImg.style.backgroundImage = "url('img/Projects/Advogh/Athree.png')"
-    }
-
-    const batImg = document.getElementById('batImg')
-    if (batNumber === 1) {
-        batImg.style.backgroundImage = "url('img/Projects/The-Batman/Bhome.png')"
-    }
-    else if (batNumber === 2) {
-        batImg.style.backgroundImage = "url('img/Projects/The-Batman/Bone.png')"
-    }
-    else if (batNumber === 3) {
-        batImg.style.backgroundImage = "url('img/Projects/The-Batman/Btwo.png')"
-    }
-    else if (batNumber === 4) {
-        batImg.style.backgroundImage = "url('img/Projects/The-Batman/Bthree.png')"
-    }
-    
-}
-
-mercBack?.addEventListener('click', () => {
-    if (mercNumber > 1) {
-        mercNumber--
-    } else if (mercNumber === 1) {
-        mercNumber = 4
-    }
-    changeImage()
-})
-
-mercNext?.addEventListener('click', () => {
-    if (mercNumber < 4) {
-        mercNumber++
-    } else if (mercNumber === 4){
-        mercNumber = 1
-    }
-    changeImage()
-})
-
-
-
-advBack?.addEventListener('click', () => {
-    if (advNumber > 1) {
-        advNumber--
-    } else if (advNumber === 1) {
-        advNumber = 4
-    }
-    changeImage()
-})
-
-advNext?.addEventListener('click', () => {
-    if (advNumber < 4) {
-        advNumber++
-    } else if (advNumber === 4){
-        advNumber = 1
-    }
-    changeImage()
-})
-
-
-batBack?.addEventListener('click', () => {
-    if (batNumber > 1) {
-        batNumber--
-    } else if (batNumber === 1) {
-        batNumber = 4
-    }
-    changeImage()
-})
-
-batNext?.addEventListener('click', () => {
-    if (batNumber < 4) {
-        batNumber++
-    } else if (batNumber === 4){
-        batNumber = 1
-    }
-    changeImage()
-})
-
-
-
 //Ajustar icones/Adjust icons
 var icons = document.querySelectorAll('.tec i')
 
@@ -426,3 +307,59 @@ function animation() {
 }
 
 animation()
+
+//Projects Slider
+const doMeio = document.getElementById('2')
+const daEsquerda = document.getElementById('1')
+const daDireita = document.getElementById('3')
+
+const avancaProjeto = document.getElementById('projectPlus')
+const voltaProjeto = document.getElementById('projectMinus')
+
+const theBatman = document.getElementById('batProjecto')
+const merchant = document.getElementById('merchantProjecto')
+const advogh = document.getElementById('advoghProjecto')
+const quiz = document.getElementById('quizProjecto')
+const countdown = document.getElementById('countdownProjecto')
+const multistep = document.getElementById('multistepProjecto')
+
+const projectos = [
+    theBatman, merchant, advogh, quiz, countdown, multistep
+]
+
+let projetoExibido = 2
+
+const proceed = () => {
+    if (projetoExibido === projectos.length) {
+        projetoExibido = 1
+    } else {
+        projetoExibido ++
+    }
+}
+
+const retreat = () => {
+    if (projetoExibido === 1) {
+        projetoExibido = projectos.length
+    } else {
+        projetoExibido --
+    }
+}
+
+const handleProjetc = () => {
+    const currentProject = projectos[projetoExibido - 1]
+
+    doMeio.innerHTML = currentProject.innerHTML
+    daEsquerda.innerHTML = projectos[(projetoExibido - 2 + projectos.length) % projectos.length].innerHTML
+    daDireita.innerHTML = projectos[projetoExibido % projectos.length].innerHTML
+}
+
+
+handleProjetc()
+
+avancaProjeto.addEventListener ('click', () => {
+    proceed(), handleProjetc(), console.log(projetoExibido)
+})
+
+voltaProjeto.addEventListener ('click', () => {
+    retreat(), handleProjetc(), console.log(projetoExibido)
+})

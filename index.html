@@ -67,33 +67,51 @@
         <h2 class="hidden" id="tecTitleOne">
             Tecnologias dominadas
         </h2>
-        <div class="tecarea hidden">
-            <div class="tec">
-                <i class="fa-brands fa-html5 fa-10x html-icon" ></i>
-                <span class="tec-name t-html">HTML 5</span>
+        <div class="tecarea">
+            <div class="tecarea-row hidden">
+                <div class="tec">
+                    <i class="fa-brands fa-html5 fa-10x html-icon" ></i>
+                    <span class="tec-name t-html">HTML 5</span>
+                </div>
+                <div class="tec">
+                    <i class="fa-brands fa-css3 fa-10x css-icon"></i>
+                    <span class="tec-name t-css">CSS 3</span>
+                </div>
+                <div class="tec">
+                    <i class="fa-brands fa-js fa-10x js-icon"></i>
+                    <span class="tec-name t-js">Javascript</span>
+                </div>
             </div>
-            <div class="tec">
-                <i class="fa-brands fa-css3 fa-10x css-icon"></i>
-                <span class="tec-name t-css">CSS 3</span>
-            </div>
-            <div class="tec">
-                <i class="fa-brands fa-js fa-10x js-icon"></i>
-                <span class="tec-name t-js">Javascript</span>
+            <div class="tecarea-row hidden">
+                <div class="tec">
+                    <i class="fa-brands fa-react fa-10x react-icon"></i>
+                    <span class="tec-name t-react">ReactJS</span>
+                </div>
+                <div class="tec">
+                    <i class="fa-brands fa-bootstrap fa-10x bootstrap-icon"></i>
+                    <span class="tec-name t-bootstrap">Bootstrap</span>
+                </div>
+                <div class="tec">
+                    <i class="fa-brands fa-envira fa-10x mongo-icon"></i>
+                    <span class="tec-name t-mongo">MongoDB</span>
+                </div>
             </div>
         </div>
         <h2 id="skills" class="hidden-r">Especialidades</h2>
         <div class="tecarea hidden-r">
-            <div class="tec">
-                <i class="fa-regular fa-newspaper fa-10x white-icon"></i>
-                <span class="white-text">Landing Pages</span>
-            </div>
-            <div class="tec">
-                <i class="fa-regular fa-file-code fa-10x white-icon"></i>
-                <span class="white-text" id="dynamics">Sites dinâmicos</span>
-            </div>
-            <div class="tec">
-                <i class="fa-solid fa-mobile-screen-button fa-10x white-icon"></i>
-                <span class="white-text" id="responsives">Sites responsivos</span>
+            <div class="tecarea-row">
+                <div class="tec">
+                    <i class="fa-regular fa-newspaper fa-10x white-icon"></i>
+                    <span class="white-text">Interface intuitiva</span>
+                </div>
+                <div class="tec">
+                    <i class="fa-regular fa-file-code fa-10x white-icon"></i>
+                    <span class="white-text" id="dynamics">Projetos dinâmicos</span>
+                </div>
+                <div class="tec">
+                    <i class="fa-solid fa-mobile-screen-button fa-10x white-icon"></i>
+                    <span class="white-text" id="responsives">Design responsivo</span>
+                </div>
             </div>
         </div>
     </div>
@@ -155,8 +173,38 @@
                     <img src="img/github.webp" alt="" class="git-icon">
                 </a>
             </div>
-            <div class="p-right">
-                <div class="project hidden-r">
+            <div class="p-carrousel hidden-r">
+
+                <div class="p-slash"></div>
+                <div class="carrousel-content">
+                    <div class="card left-card">
+                        <div class="c-content" id="1"></div>
+                        <div class="left-gradient">
+                            
+                        </div>
+                    </div>
+                    <div class="card caught-in-the-middle" id="2">
+        
+                    </div>
+                    <div class="card right-card">
+                        <div class="c-content" id="3"></div>
+                        <div class="right-gradient" >
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="p-slash"></div>
+                <div class="carrousel-buttons">
+                    <div class="c-button" id="projectMinus">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="c-button" id="projectPlus">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="notnow">
+                <div class="project hidden-r" id="merchantProjecto">
                     <div class="p-name">
                         <span class="merc-title">Merchant</span>
                     </div>
@@ -164,17 +212,13 @@
                         <span id="mercDesc">Projeto de E-commerce destinado a venda de eletrônicos.</span>
                     </div>
                     <div class="p-imgs" id="mercImg">
-                        <div class="p-btns">
-                            <button class="img-btn mercBack" id="backBtn"><i class="fa-solid fa-arrow-left"></i></button>
-                            <button class="img-btn mercNext" id="nextkBtn"><i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
                     </div>
                     <div class="p-link">
-                        <a href="https://renan-nxscimento.github.io/Merchant_E-commerce/" target="_blank">Ver projeto</a>
+                        <a href="https://merchant-react.onrender.com" target="_blank">Ver projeto</a>
                     </div>
                 </div>
-                <div class="p-slash"></div>
-                <div class="project hidden-r">
+                
+                <div class="project hidden-r" id="advoghProjecto">
                     <div class="p-name">
                         <span class="adv-title">Advogh</span>
                     </div>
@@ -182,17 +226,13 @@
                         <span id="advDesc">Projeto de Landing Page para escritório de advocacia.</span>
                     </div>
                     <div class="p-imgs" id="advImg">
-                        <div class="p-btns">
-                            <button class="img-btn advBack" id="backBtn"><i class="fa-solid fa-arrow-left"></i></button>
-                            <button class="img-btn advNext" id="nextkBtn"><i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
                     </div>
                     <div class="p-link">
                         <a href="https://renan-nxscimento.github.io/Advogh/" target="_blank">Ver projeto</a>
                     </div>
                 </div>
-                <div class="p-slash"></div>
-                <div class="project hidden-r">
+                
+                <div class="project hidden-r" id="batProjecto">
                     <div class="p-name">
                         <span class="bat-title">The Batman</span>
                     </div>
@@ -200,13 +240,51 @@
                         <span id="batDesc">Projeto de site destinado á venda de ingressos.</span>
                     </div>
                     <div class="p-imgs" id="batImg">
-                        <div class="p-btns">
-                            <button class="img-btn batBack" id="backBtn"><i class="fa-solid fa-arrow-left"></i></button>
-                            <button class="img-btn batNext" id="nextkBtn"><i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
                     </div>
                     <div class="p-link">
                         <a href="https://renan-nxscimento.github.io/The-Batman/" target="_blank">Ver projeto</a>
+                    </div>
+                </div>
+
+                <div class="project hidden-r" id="countdownProjecto">
+                    <div class="p-name">
+                        <span class="count-title">Countdown</span>
+                    </div>
+                    <div class="p-desc">
+                        <span id="countDesc">Projeto em React de contagem regressiva personalizada.</span>
+                    </div>
+                    <div class="p-imgs" id="countImg">
+                    </div>
+                    <div class="p-link">
+                        <a href="https://countdown-wfzw.onrender.com" target="_blank">Ver projeto</a>
+                    </div>
+                </div>
+
+                <div class="project hidden-r" id="multistepProjecto">
+                    <div class="p-name">
+                        <span class="multi-title">Formulário Multistep</span>
+                    </div>
+                    <div class="p-desc">
+                        <span id="multiDesc">Projeto em React de um formulário dividido por etapas.</span>
+                    </div>
+                    <div class="p-imgs" id="multiImg">
+                    </div>
+                    <div class="p-link">
+                        <a href="https://multistep-form-ct58.onrender.com" target="_blank">Ver projeto</a>
+                    </div>
+                </div>
+
+                <div class="project hidden-r" id="quizProjecto">
+                    <div class="p-name">
+                        <span class="quiz-title">Quiz App</span>
+                    </div>
+                    <div class="p-desc">
+                        <span id="quizDesc">Quiz sobre programação desenvolvido em React</span>
+                    </div>
+                    <div class="p-imgs" id="quizImg">
+                    </div>
+                    <div class="p-link">
+                        <a href="https://quiz-react-p3iz.onrender.com" target="_blank">Ver projeto</a>
                     </div>
                 </div>
             </div>

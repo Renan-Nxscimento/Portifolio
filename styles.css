@@ -407,16 +407,24 @@ a {
     margin-top: 80px;
     display: flex;
     justify-content: center;
-    gap: 5%;
     align-items: center;
     width: fit-content;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-.tecarea :nth-child(2){
+.tecarea-row {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+}
+
+.tecarea-row :nth-child(2){
     transition-delay: 400ms;
 }
 
-.tecarea :nth-child(3){
+.tecarea-row :nth-child(3){
     transition-delay: 700ms;
 }
 
@@ -491,6 +499,54 @@ a {
     background-clip: text;
 }
 
+.react-icon {
+    color: transparent;
+    background: linear-gradient(
+        180deg,
+        rgb(7, 95, 117) 12%,
+        rgb(38, 230, 255) ,
+        rgb(76, 219, 255),
+        rgb(194, 255, 245) 53%,
+        rgb(255, 255, 255) 55%,
+        rgb(108, 196, 191) 60%,
+        rgb(24, 197, 228) 70%,
+        rgb(71, 137, 168) 95%
+    );
+    background-clip: text;
+}
+
+.bootstrap-icon {
+    background: linear-gradient(
+        180deg,
+        rgb(61, 25, 90) 12%,
+        rgb(103, 81, 197) 25%,
+        rgb(151, 75, 214),
+        rgb(255, 255, 255) 53%,
+        rgb(128, 80, 173) 58%,
+        rgb(106, 57, 197) 60%,
+        rgb(142, 0, 170) 70%,
+        rgb(84, 5, 116) 80%
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.mongo-icon {
+    background: linear-gradient(
+        180deg,
+        rgb(36, 90, 25) 12%,
+        rgb(81, 197, 91) 25%,
+        rgb(75, 214, 82),
+        rgb(255, 255, 255) 53%,
+        rgb(29, 160, 25) 58%,
+        rgb(62, 145, 6) 60%,
+        rgb(0, 95, 24) 70%,
+        rgb(13, 59, 1) 80%
+    );
+    background-clip: text;
+    color: transparent;
+}
+
 .white-icon {
     color: transparent;
     background: linear-gradient(
@@ -525,6 +581,21 @@ a {
 .t-js {
     color: rgb(255, 252, 225);
     text-shadow: 0px 0px 3px rgb(255, 241, 44), 0px 0px 6px rgb(182, 171, 18);
+}
+
+.t-react {
+    color: rgb(255, 252, 225);
+    text-shadow: 0px 0px 3px rgb(44, 255, 220), 0px 0px 6px rgb(18, 177, 182);
+}
+
+.t-bootstrap {
+    color: rgb(255, 252, 225);
+    text-shadow: 0px 0px 3px rgb(233, 161, 255), 0px 0px 6px rgb(167, 16, 255);
+}
+
+.t-mongo {
+    color: rgb(255, 252, 225);
+    text-shadow: 0px 0px 3px rgb(104, 255, 44), 0px 0px 6px rgb(18, 182, 45);
 }
 
 .about-section {
@@ -620,7 +691,7 @@ a {
     padding-top: 50px;
     margin-top: 1px;
     display: flex;
-    height: 200vh;
+    height: 100vh;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -632,7 +703,7 @@ a {
         rgb(85, 0, 119) 1%,
         rgb(39, 0, 65) 4%,
         rgb(19, 0, 29) 15%, 
-        rgb(26, 0, 43) 85%, 
+        rgb(19, 0, 29) 85%, 
         rgb(21, 0, 36) 92%,
         rgb(20, 0, 37) 99%, 
         rgb(18, 0, 39) 99.9%);
@@ -653,7 +724,14 @@ a {
     width: fit-content;
     font-style: italic;
     text-align: left;
-    text-shadow: 0px 0px 3px rgb(255, 176, 176), 0px 0px 5px rgb(255, 61, 87), 0px 0px 6px rgb(255, 125, 244), 0px 0px 5px rgb(231, 0, 77), 0px 0px 6px rgb(89, 27, 95), 0px 0px 6px rgb(89, 27, 95), 0px 0px 10px rgb(231, 0, 77);
+    text-shadow: 
+    0px 0px 3px rgb(255, 176, 176), 
+    0px 0px 5px rgb(255, 61, 87), 
+    0px 0px 6px rgb(255, 125, 244), 
+    0px 0px 5px rgb(231, 0, 77), 
+    0px 0px 6px rgb(89, 27, 95), 
+    0px 0px 6px rgb(89, 27, 95), 
+    0px 0px 10px rgb(231, 0, 77);
 }
 
 .p-content {
@@ -687,7 +765,7 @@ a {
     }
 
     50%{
-        transform: translateY(-50px);
+        transform: translateY(50px);
     }
 
     100%{
@@ -774,6 +852,53 @@ a {
     background-clip: text;
 }
 
+.count-title{
+    background: linear-gradient(
+        180deg,
+        rgb(80, 80, 80) 12%,
+        rgb(156, 156, 156) 25%,
+        rgb(216, 216, 216),
+        rgb(255, 255, 255) 53%,
+        rgb(197, 197, 197) 55%,
+        rgb(160, 160, 160) 60%,
+        rgb(143, 143, 143) 70%,
+        rgb(90, 90, 90) 90%
+    );
+    background-clip: text;
+}
+
+.multi-title{
+    background: linear-gradient(
+        180deg,
+        rgb(78, 63, 114) 12%,
+        rgb(119, 101, 197) 25%,
+        rgb(158, 101, 206),
+        rgb(255, 255, 255) 53%,
+        rgb(128, 80, 173) 58%,
+        rgb(106, 57, 197) 60%,
+        rgb(122, 69, 172) 70%,
+        rgb(94, 57, 109) 80%
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.quiz-title{
+    background: linear-gradient(
+        180deg,
+        rgb(61, 25, 90) 12%,
+        rgb(128, 58, 194) 25%,
+        rgb(163, 75, 214),
+        rgb(255, 255, 255) 53%,
+        rgb(157, 80, 173) 58%,
+        rgb(157, 57, 197) 60%,
+        rgb(137, 25, 172) 70%,
+        rgb(84, 5, 116) 80%
+    );
+    background-clip: text;
+    color: transparent;
+}
+
 .p-desc {
     width: fit-content;
     line-height: 23px;
@@ -794,11 +919,18 @@ a {
     padding: 10px;
     display: flex;
     border: 3px solid rgb(231, 0, 77);
-    box-shadow: 0px 0px 3px rgb(255, 176, 176), 0px 0px 5px rgb(255, 61, 87), 0px 0px 6px rgb(255, 125, 244), 0px 0px 5px rgb(231, 0, 77), 0px 0px 6px rgb(89, 27, 95), 0px 0px 6px rgb(89, 27, 95), 0px 0px 10px rgb(231, 0, 77);
+    box-shadow: 
+    0px 0px 3px rgb(255, 176, 176), 
+    0px 0px 5px rgb(255, 61, 87), 
+    0px 0px 6px rgb(255, 125, 244), 
+    0px 0px 5px rgb(231, 0, 77), 
+    0px 0px 6px rgb(89, 27, 95), 
+    0px 0px 6px rgb(89, 27, 95), 
+    0px 0px 10px rgb(231, 0, 77);
 }
 
 #mercImg {
-    background-image: url(img/Projects/Merchant/Mhome.png);
+    background-image: url(img/Projects/Merchant/Merchant.png);
 }
 
 #advImg {
@@ -807,6 +939,18 @@ a {
 
 #batImg {
     background-image: url(img/Projects/The-Batman/Bhome.png);
+}
+
+#multiImg {
+    background-image: url(img/Projects/Multistep/multistep.png);
+}
+
+#quizImg {
+    background-image: url(img/Projects/Quiz/quiz.png);
+}
+
+#countImg {
+    background-image: url(img/Projects/Countdown/countdown.png);
 }
 
 .p-btns{
@@ -861,6 +1005,123 @@ a {
 
 .p-link:hover::before{
     width: 100%;
+}
+
+.projects-section {
+    padding-right: 100px;
+}
+
+.notnow {
+    display: none !important;
+}
+
+.p-carrousel {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.carrousel-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: unset;
+    position: relative;
+}
+
+.card {
+    min-width: 500px;
+    min-height: 265px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.c-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.caught-in-the-middle {
+    background-color: transparent;
+    text-align: center;
+    gap: 10px;
+}
+
+.left-card {
+    transform: scale(0.7);
+    margin-right: -50px;
+}
+
+.left-gradient {
+    background: 
+    linear-gradient(to right,
+        rgb(19, 0, 29)0.1%,
+        rgb(19, 0, 29) 30%,
+        rgba(19, 0, 29, 0.3) 100%);
+    width: 100%;
+    height: 150%;
+    z-index: 999;
+    position: absolute;
+}
+
+.right-gradient {
+    background: 
+    linear-gradient(to left,
+        rgb(19, 0, 29)0.1%,
+        rgb(19, 0, 29) 30%,
+        rgba(19, 0, 29, 0.3) 100%);
+    width: 100%;
+    height: 150%;
+    z-index: 999;
+    position: absolute;
+}
+
+.right-card {
+    transform: scale(0.7);
+     margin-left: -50px;
+}
+
+.carrousel-buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: -280px;
+    padding: 0px 10px;
+}
+
+.c-button {
+    width: 50px;
+    height: 50px;
+    background-color: #431ea7;
+    border-radius: 50%;
+    color: rgb(206, 206, 0);
+    border: 1px solid;
+    box-shadow: 0px 0px 10px yellow;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.c-button:hover {
+    color: yellow;
+    text-shadow: 0px 0px 3px rgb(255, 241, 44), 0px 0px 6px rgb(182, 171, 18);
+    background-color: #361988;
 }
 
 .contact-section{
@@ -1209,7 +1470,9 @@ a {
     }
 
     .tecnologies-section {
-        padding-top: 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        min-height: fit-content;
     }
 
     .tecnologies-section h2{
@@ -1217,7 +1480,7 @@ a {
     }
 
     .tecarea{
-        margin-top: 80px;
+        margin-top: 40px;
         width: 90%;
     }
 
@@ -1253,11 +1516,45 @@ a {
         max-width: 340px;
     }
 
+    .projects-section {
+        padding-right: unset !important;
+    }
+
     .p-title{
         text-align: center;
         font-size: 32px;
         margin-top: 50px;
         padding-bottom: 80px;
+    }
+
+    .p-content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .p-carrousel {
+        width: 90vw !important;
+    }
+
+    .carrousel-buttons {
+        top: -240px;
+        padding: unset;
+    }
+
+    .card {
+        min-width: 375px;
+    }
+
+    .left-card {
+        margin-right: -20vw;
+    }
+
+    .right-card {
+        margin-left: -20vw;
+    }
+
+    .p-desc {
+        max-width: 90vw;
     }
 
     .p-left{
@@ -1272,19 +1569,17 @@ a {
     .p-imgs{
         height: 182px;
         width: 340px;
+        padding: unset;
+    }
+
+    .contact-section {
+        min-height: fit-content;
     }
 
     .c-title{
         font-size: 26px;
         margin-top: 50px;
         margin-bottom: 80px;
-    }
-
-    .c-container{
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        padding-bottom: 50px;
     }
 
     .c-item{
@@ -1308,3 +1603,5 @@ a {
     }
 
 }
+
+
